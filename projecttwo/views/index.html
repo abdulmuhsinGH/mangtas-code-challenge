@@ -56,11 +56,19 @@
             </div>
             <div>
               <ol class="list-group list-group">
+                {{if .Data}}
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Word</div>
+                  </div>
+                  <span class="badge bg-primary">Times of Occurence</span>
+                </li>
+                {{end}}
                 {{ range $key, $value := .Data }}
 
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                   <div class="ms-2 me-auto">
-                    <div class="fw-bold">{{ $key }}</div>
+                    <div class="">{{ $key }}</div>
                   </div>
                   <span class="badge bg-primary rounded-pill">{{ $value }}</span>
                 </li>
